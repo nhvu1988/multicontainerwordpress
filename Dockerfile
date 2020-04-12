@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php:7.4-apache
 
 # install the PHP extensions we need
 RUN set -ex; \
@@ -29,7 +29,7 @@ RUN set -ex; \
 	rm -rf /var/lib/apt/lists/*
 
 #install redis php extension
-ENV PHPREDIS_VERSION=4.0.2
+ENV PHPREDIS_VERSION=5.2.1
 
 RUN docker-php-source extract \
   && curl -L -o /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/$PHPREDIS_VERSION.tar.gz \
