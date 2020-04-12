@@ -7,6 +7,7 @@ RUN set -ex; \
 	\
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
+		libfreetype6-dev \
 		libjpeg-dev \
 		libpng-dev \
 	; \
